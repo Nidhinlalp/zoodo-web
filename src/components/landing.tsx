@@ -1,5 +1,6 @@
-import ScrollExpandMedia from "@/lib/components/blocks/scroll-expansion-hero";
+import ScrollExpandMedia from "@/components/ui/scroll-expansion-hero";
 import { useState, useEffect } from "react";
+import { renderCanvas } from "./ui/hero-designali";
 
 interface MediaAbout {
   overview: string;
@@ -63,17 +64,24 @@ const Landing = () => {
     window.dispatchEvent(resetEvent);
   }, [mediaType]);
 
+  useEffect(() => {
+    renderCanvas();
+  }, []);
+
   return (
-    <div className="min-h-screen">
-      <ScrollExpandMedia
-        mediaType={mediaType as "video" | "image"}
-        mediaSrc={currentMedia.src}
-        posterSrc={mediaType === "video" ? currentMedia.poster : undefined}
-        bgImageSrc={currentMedia.background}
-        title={currentMedia.title}
-        date={currentMedia.date}
-        scrollToExpand={currentMedia.scrollToExpand}
-      ></ScrollExpandMedia>
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Content positioned relative to allow z-index stacking */}
+      <div className="relative z-10">
+        <ScrollExpandMedia
+          mediaType={mediaType as "video" | "image"}
+          mediaSrc={currentMedia.src}
+          posterSrc={mediaType === "video" ? currentMedia.poster : undefined}
+          bgImageSrc={currentMedia.background}
+          title={currentMedia.title}
+          date={currentMedia.date}
+          scrollToExpand={currentMedia.scrollToExpand}
+        ></ScrollExpandMedia>
+      </div>
     </div>
   );
 };

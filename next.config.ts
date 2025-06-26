@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       "localhost",
       "me7aitdbxq.ufs.sh",
       "wallpapercave.com",
+      "raw.githubusercontent.com",
     ],
   },
 };

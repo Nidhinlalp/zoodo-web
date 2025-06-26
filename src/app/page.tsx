@@ -1,5 +1,6 @@
 "use client";
 
+import { Introducing } from "@/components/indroducing";
 import Landing from "@/components/landing";
 import { NavBar } from "@/components/nav";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="bg-black">
       <NavBar />
       <Landing />
+      <Introducing />
     </div>
   );
 }

@@ -195,6 +195,7 @@ const ScrollExpandMedia = ({
             animate={{ opacity: 1 - scrollProgress }}
             transition={{ duration: 0.1 }}
           >
+            {/* Background Image */}
             <Image
               src={bgImageSrc}
               alt="Background"
@@ -207,6 +208,14 @@ const ScrollExpandMedia = ({
               }}
               priority
             />
+
+            {/* ✅ Canvas inserted here */}
+            <canvas
+              id="canvas"
+              className="absolute inset-0 w-full h-full pointer-events-none"
+            ></canvas>
+
+            {/* Overlay */}
             <div className="absolute inset-0 bg-black/10" />
           </motion.div>
 
@@ -354,7 +363,7 @@ const ScrollExpandMedia = ({
             </div>
 
             <motion.section
-              className="flex flex-col w-full px-8 py-10 md:px-16 lg:py-20"
+              className="flex flex-col w-full px-8 py-0 md:px-16 lg:py-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: showContent ? 1 : 0 }}
               transition={{ duration: 0.7 }}
