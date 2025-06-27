@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  transpilePackages: ["@studio-freight/react-lenis"],
   images: {
     domains: [
       "images.unsplash.com",
@@ -9,6 +10,7 @@ const nextConfig: NextConfig = {
       "me7aitdbxq.ufs.sh",
       "wallpapercave.com",
       "raw.githubusercontent.com",
+      "ui.aceternity.com",
     ],
   },
   eslint: {
