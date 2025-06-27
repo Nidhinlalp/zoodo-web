@@ -23,7 +23,7 @@ interface MediaContentCollection {
 
 const sampleMediaContent: MediaContentCollection = {
   video: {
-    src: "https://res.cloudinary.com/dgjpqwxpj/video/upload/v1750870429/landingvideo.mov",
+    src: "https://res.cloudinary.com/dgjpqwxpj/video/upload/v1750998445/uly7zvfip71qvh9lbeza.mp4",
     poster:
       "https://images.pexels.com/videos/5752729/space-earth-universe-cosmos-5752729.jpeg",
     background: "https://wallpapercave.com/wp/wp2333032.jpg",
